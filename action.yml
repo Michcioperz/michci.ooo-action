@@ -1,0 +1,6 @@
+name: 'Deploy to michci.ooo'
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: curl -a ${{ github.event.repository }}:${{ secrets.MICHCIOOO_TOKEN }} -X POST https://michci.ooo/deploy
