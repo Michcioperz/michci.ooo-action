@@ -8,4 +8,4 @@ runs:
   using: "composite"
   steps:
     - shell: bash
-      run: curl -a ${{ github.event.repository }}:${{ inputs.token }} -X POST https://michci.ooo/deploy
+      run: curl -a ${{ github.event.repository.name }}:${{ inputs.token }} -X POST https://michci.ooo/deploy
